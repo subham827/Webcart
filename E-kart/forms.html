@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+    <!-- <div class="cont"><h1>Payment form</h1></div> -->
+    <div class="cont">
+
+        <form action="" method="GET">
+            <h1 class="main">Payment form</h1>
+            <h2>Contact information</h2>
+            <p>Name*: <input type="text" name="name" required></p>
+            <fieldset>
+                <legend>Gender*</legend>
+                <p>
+                    Male <input type="radio" name="gender" id="1" required>
+                    Female <input type="radio" name="gender" id="2" required>
+                    others <input type="radio" name="gender" id="3" required>
+                </p>
+                
+            </fieldset>
+            <p>Adress: <textarea name="adress" id="4" cols="100" rows="8"></textarea></p>
+            <p>Mail <input type="email" name="email" id="5"></p>
+            <p>PINCODE <input type="text" name="pincode" id="6"></p>
+            <h2>Payment info</h2>        
+            <p>Card Type:
+                <select name="card_type" id="7" required>
+                    <option value="">Select a card type </option>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">mastercard</option>
+                    <option value="RuPay">RuPay</option>
+                    
+                </select>
+            </p>
+            <p>Card number* <input type="number" id="8" placeholder="1111-2222-3333-4444" required></p>
+            <p>
+                Expiration date*
+                <input type="date" name="exp_date" id="9" required>
+            </p>
+            <p>CVV* <input type="password" name="cvv" id="10" required></p>
+            <input type="submit" value="pay now" onclick="ret()" id="g10"> 
+        </form>
+    </div><script>
+        function ret(){
+let  g10 = document.getElementById('g10');
+let cont = document.getElementsByClassName('cont');
+if(g10.style.display='block'){
+    alert("The payment is done");
+    
+}else{
+    g10.style.backgroundColor='orange';
+}
+        }
+    </script>
+</body>
+</html>
